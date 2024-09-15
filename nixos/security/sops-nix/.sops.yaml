@@ -1,0 +1,10 @@
+keys:
+  - &masterkey age1ckjeyv5wn0rfyxah0llyzyx26l9vf0xz9mcc0z9j42txymxvt4uqv2yqk5
+  - &hosts:
+    - &kahlenden age18rv0mddl383gctzktzf2muydchksk7a35gcw33xjtkr3e3jxxaqqa9tlld
+creation_rules:
+  - path_regex: secrets.yaml$
+    key_groups:
+    - age:
+      - *masterkey
+      - *kahlenden
