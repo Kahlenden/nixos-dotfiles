@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs/3212a3719697ca78734510103c8aa10bb12584e3"; #";#nixos-unstable"; " #nixos-24.05";
+      url = "github:nixos/nixpkgs/nixos-unstable"; #3212a3719697ca78734510103c8aa10bb12584e3"; #nixos-unstable"; #nixos-24.05";
     };
 
     home-manager = {
@@ -27,7 +27,7 @@
       url = "https://github.com/hyprwm/Hyprland";
       type = "git";
       submodules = true;
-      inputs.nixpkgs.follows = "nixpkgs";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hyprgrass = {

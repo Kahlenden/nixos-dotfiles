@@ -12,7 +12,6 @@ let
     mullvad-vpn &
   '';
   startOnSpecialWorkspace = pkgs.pkgs.writeShellScriptBin "start" ''
-    super-productivity &
     youtube-music &
   '';
   lockscreen = pkgs.pkgs.writeShellScriptBin "lockscreen" ''
@@ -114,7 +113,8 @@ in
         "float,title:^(Amberol)$"
         "size 420 720,title:^(Amberol)$"
         "move center center,title:^(Amberol)$"
-        "pin, title:(Picture in picture)"
+        "pin, title:^(Picture in picture)$"
+        "float, title:^(.*)(Oracle VM VirtualBox)(.*)$"
       ];
       
       workspace = [

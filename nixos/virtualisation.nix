@@ -20,7 +20,7 @@
 
   # Manage the virtualisation services
   virtualisation = {
-/*
+
     # Virtualbox configuration
     virtualbox = {
       host = {
@@ -33,7 +33,7 @@
         #clipboard = true;
       };
     };
-*/
+
     # libvritd configuration for virt manager
     libvirtd = {
       enable = true;

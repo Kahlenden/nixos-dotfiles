@@ -38,13 +38,13 @@
     gptfdisk cryptsetup efibootmgr sbctl
 
     # Necessities
-    (qt6Packages.callPackage ./caesium{}) # image compressor
+    #(qt6Packages.callPackage ./caesium{}) # image compressor
     gnome-font-viewer
     gnome-disk-utility
     qbittorrent # Torrent client
     libreoffice # Office
     keepassxc # Password manager
-    ollama # AI
+#    ollama # AI
     czkawka # file duplication romover
     polkit_gnome # Graphical sudo
     pavucontrol # GUI for PulseAudio
