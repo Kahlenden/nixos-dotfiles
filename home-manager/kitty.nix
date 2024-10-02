@@ -9,10 +9,10 @@
     };
 
     shellIntegration.enableFishIntegration = true;
-    theme = "Catppuccin-Macchiato";
+    themeFile = "Catppuccin-Macchiato";
 
     settings = {
-      background_opacity = "0.3";
+      background_opacity = "0.5";
       hide_window_decorations = "yes";
     };
     

@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/b3c49142939ba6072cb8bdd6109e36d1b70a055a";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; #/b3c49142939ba6072cb8bdd6109e36d1b70a055a";
 
     ags.url = "github:Aylur/ags";
 
@@ -28,6 +28,11 @@
       type = "git";
       submodules = true;
       #inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
     };
 
     hyprgrass = {
@@ -45,6 +50,7 @@
   , nixpkgs
   , hyprland
   , nix-vscode-extensions
+  , split-monitor-workspaces
   , ... 
   }@inputs:
 

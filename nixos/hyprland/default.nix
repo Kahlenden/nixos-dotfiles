@@ -42,8 +42,7 @@
   grim
   starship
   cava
-  imagemagick
-  gnome.gnome-bluetooth
+  imagemagick 
   wl-clipboard
   wf-recorder
   slurp
@@ -53,7 +52,8 @@
   *   Screen Sharing, link opening, file opening, etc... */
   xdg.portal = {
     enable = true;
-    extraPortals = [ 
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal
     ];

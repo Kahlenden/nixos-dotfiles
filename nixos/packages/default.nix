@@ -20,27 +20,19 @@
     dart-sass # scss
     fd
 
-    # for https://github.com/Beinsezii/NieR-Cursors
-    xorg.xcursorgen bc blender
-    nwg-look
-
     # Terminal utils
     coreutils findutils pciutils inetutils
     htop tree neofetch lolcat curl wget intel-gpu-tools neovim jq crudini ascii
     glxinfo
     unar # unarchive
     piper # daemon for gaming mouse
-    #kitty
-    kitty-themes
-    foot
+    #kitty-themes
 
     # boot stuffs
     gptfdisk cryptsetup efibootmgr sbctl
 
     # Necessities
     #(qt6Packages.callPackage ./caesium{}) # image compressor
-    gnome-font-viewer
-    gnome-disk-utility
     qbittorrent # Torrent client
     libreoffice # Office
     keepassxc # Password manager
@@ -50,13 +42,14 @@
     pavucontrol # GUI for PulseAudio
     sops # handing secrets
     openvpn
-    gnome-calculator
-    
+    xwaylandvideobridge # screen sharing on xwayland
+    openvpn3
+
     # Browsers
     brave mullvad-browser librewolf
 
     # Networking stuffs
-    # gns3-server gns3-gui dynamips ubridge vpcs
+    #gns3-server gns3-gui dynamips ubridge vpcs
     wireshark
  
     # Monero
@@ -71,15 +64,21 @@
     super-productivity
     
     # Apps
-    thunderbird freetube discord signal-desktop teams-for-linux
+    thunderbird freetube vesktop signal-desktop teams-for-linux
+      # Useful gnome apps
+      gnome-calculator
+      gnome-bluetooth
+      gnome-font-viewer
+      gnome-disk-utility
     
     # Music
-    songrec youtube-music amberol spotube 
+    songrec youtube-music amberol
+
     # Media related
     loupe vlc obs-studio gimp
 
     # GPU benchmarking
-    unigine-superposition unigine-valley
+    unigine-superposition
   ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget

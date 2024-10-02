@@ -52,7 +52,7 @@ in
 
     plugins = [
       inputs.hyprgrass.packages.${pkgs.system}.default
-#      inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+      inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     ];
 
     settings = {
@@ -115,6 +115,14 @@ in
         "move center center,title:^(Amberol)$"
         "pin, title:^(Picture in picture)$"
         "float, title:^(.*)(Oracle VM VirtualBox)(.*)$"
+      ];
+
+      windowrulev2 = [
+        "opacity 0.0 override, class:^(xwaylandvideobridge)$"
+        "noanim, class:^(xwaylandvideobridge)$"
+        "noinitialfocus, class:^(xwaylandvideobridge)$"
+        "maxsize 1 1, class:^(xwaylandvideobridge)$"
+        "noblur, class:^(xwaylandvideobridge)$"
       ];
       
       workspace = [
@@ -182,19 +190,23 @@ in
       # in milliseconds
         long_press_delay = 400;
       };
+      "plugin:split-monitor-workspaces" = {
+        count = 7;
+        enable_persistent_workspaces = 1;
+      };
 
-      monitor = ",highres,auto,1";
+      monitor = "eDP-1, 1920x1080@60.16400, 0x0, 1";
 
-      "$mod" = "SUPER";
-      "$mod2" = "ControlAlt";
+      "$mod"            = "SUPER";
+      "$mod2"           = "ControlAlt";
 
-      "$menu" = "ags -b hypr -t launcher";
-      "$powermenu" = "ags -b hypr -t powermenu";
-      "$terminal" = "kitty";
-      "$screenShot" = ''grim -g "$(slurp)" - | wl-copy && notify-send "Screenshot copied to clipboard" -a "ss"'';
-      "$fileManager" = "nautilus";
-      "$code" = "codium";
-      "$browser" = "mullvad-browser";
+      "$menu"           = "ags -b hypr -t launcher";
+      "$powermenu"      = "ags -b hypr -t powermenu";
+      "$terminal"       = "kitty";
+      "$screenShot"     = ''grim -g "$(slurp)" - | wl-copy && notify-send "Screenshot copied to clipboard" -a "ss"'';
+      "$fileManager"    = "nautilus";
+      "$code"           = "codium";
+      "$browser"        = "mullvad-browser";
 
       binds = {
         allow_workspace_cycles = true;
@@ -210,12 +222,12 @@ in
       ];
 
       bindl = [
-        ",XF86AudioPlay, exec, playerctl play-pause"
-        ",XF86AudioPrev, exec, playerctl previous"
-        ",XF86AudioNext, exec, playerctl next"
+        ",XF86AudioPlay,    exec, playerctl play-pause"
+        ",XF86AudioPrev,    exec, playerctl previous"
+        ",XF86AudioNext,    exec, playerctl next"
         ",XF86AudioMicMute, exec, ${pactl} set-source-mute @DEFAULT_SOURCE@ toggle"
-        ", XF86AudioMute, exec, ${pactl} set-sink-mute @DEFAULT_SINK@ toggle"
-        ", XF86PowerOff, exec, $powermenu"
+        ", XF86AudioMute,   exec, ${pactl} set-sink-mute @DEFAULT_SINK@ toggle"
+        ", XF86PowerOff,    exec, $powermenu"
         #",switch:off:Lid Switch,exec,${lockscreen}/bin/lockscreen"
         #",switch:off:Lid Switch,exec,hyprctl dispatch dpms off"
         #",switch:on:Lid Switch,exec,hyprctl dispatch dpms on"
@@ -224,20 +236,20 @@ in
       bind = [
         "Alt, F4, killactive,"
         "$mod, F, fullscreen"
-        "Alt, P, pin"
+        "Alt, P,  pin"
         "$mod, P, pseudo," # dwindle
         "$mod, J, togglesplit," # dwindle
+        "$mod, V,           togglefloating,"
         "Control Shift, Escape, exit"
 
-        "$mod, E, exec, $fileManager"
-        "$mod, V, togglefloating," 
-        "SUPER_L, SUPER_L, exec, $menu"
-        ",Print, exec, $screenShot"
-        "$mod2, T, exec, $terminal"
-        "$mod, C, exec, $code"
-        "$mod, B, exec, $browser"
-        "$mod, L, exec, ${lockscreen}/bin/lockscreen"
-        "Control Shift, R, exec, ags -b hypr quit; ags -b hypr"  
+        "$mod, E,           exec, $fileManager"
+        "SUPER_L, SUPER_L,  exec, $menu"
+        ",Print,            exec, $screenShot"
+        "$mod2, T,          exec, $terminal"
+        "$mod, C,           exec, $code"
+        "$mod, B,           exec, $browser"
+        "$mod, L,           exec, ${lockscreen}/bin/lockscreen"
+        "Control Shift, R,  exec, ags -b hypr quit; ags -b hypr"  
 
         # change direction of monitor 
         "ALT, up, exec,    hyprctl --batch 'keyword monitor eDP-1,preferred,auto,1,transform,0 ; keyword input:touchdevice:transform 0'"
@@ -251,48 +263,28 @@ in
         "SHIFT, up, movefocus, u"
         "SHIFT, down, movefocus, d"
 
-        # Switch workspaces with mod + [0-9]
-        "$mod, 1, workspace, 1"
-        "$mod, 2, workspace, 2"
-        "$mod, 3, workspace, 3"
-        "$mod, 4, workspace, 4"
-        "$mod, 5, workspace, 5"
-        "$mod, 6, workspace, 6"
-        "$mod, 7, workspace, 7"
-        "$mod, 8, workspace, 8"
-        "$mod, 9, workspace, 9"
-        "$mod, 0, workspace, 10"
-
         # Move active window to a workspace with mod + SHIFT + [0-9]
-        "$mod2 , 1, movetoworkspace, 1"
-        "$mod2 , 2, movetoworkspace, 2"
-        "$mod2 , 3, movetoworkspace, 3"
-        "$mod2 , 4, movetoworkspace, 4"
-        "$mod2 , 5, movetoworkspace, 5"
-        "$mod2 , 6, movetoworkspace, 6"
-        "$mod2 , 7, movetoworkspace, 7"
-        "$mod2 , 8, movetoworkspace, 8"
-        "$mod2 , 9, movetoworkspace, 9"
-        "$mod2 , 0, movetoworkspace, 10"
-
+        "$mod , 1, split-movetoworkspace, 1"
+        "$mod , 2, split-movetoworkspace, 2"
+        "$mod , 3, split-movetoworkspace, 3"
+        "$mod , 4, split-movetoworkspace, 4"
+        "$mod , 5, split-movetoworkspace, 5"
 
         # Example special workspace (scratchpad)
-        "$mod, S, togglespecialworkspace, magic"
+        "$mod, S,       togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
 
-        # Scroll through existing workspaces with mod + scroll
-        "$mod2, right, workspace, +1"
-        "$mod2, left, workspace, -1"
-        "$mod, right, movetoworkspace, +1"
-        "$mod, left, movetoworkspace, -1"
+        "$mod, right,   split-workspace, +1"
+        "$mod, left,    split-workspace, -1"
+
+        "$mod2, right,  split-movetoworkspace, +1"
+        "$mod2, left,   split-movetoworkspace, -1"
 
         #touch_grass plugins config
-        " , edge:l:r, exec, $menu"
-        " , edge:r:l, exec, $terminal"
-        " , edge:d:u, togglespecialworkspace, magic"
-        " , swipe:3:u, exec, wvkbd-mobintl &"
-        " , swipe:3:d, exec, pkill wvkbd-mobintl"
-        " , swipe:4:d, killactive"
+        " , edge:d:u,   togglespecialworkspace, magic"
+        " , swipe:3:u,  exec, wvkbd-mobintl &"
+        " , swipe:3:d,  exec, pkill wvkbd-mobintl"
+        " , swipe:4:d,  killactive"
       ];
 
       # Move/resize windows with mod + LMB/RMB and dragging
