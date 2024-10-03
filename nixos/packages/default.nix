@@ -26,7 +26,7 @@
     glxinfo
     unar # unarchive
     piper # daemon for gaming mouse
-    #kitty-themes
+    nmap dig
 
     # boot stuffs
     gptfdisk cryptsetup efibootmgr sbctl

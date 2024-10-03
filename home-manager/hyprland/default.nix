@@ -191,7 +191,7 @@ in
         long_press_delay = 400;
       };
       "plugin:split-monitor-workspaces" = {
-        count = 7;
+        count = 5;
         enable_persistent_workspaces = 1;
       };
 
@@ -264,21 +264,26 @@ in
         "SHIFT, down, movefocus, d"
 
         # Move active window to a workspace with mod + SHIFT + [0-9]
-        "$mod , 1, split-movetoworkspace, 1"
-        "$mod , 2, split-movetoworkspace, 2"
-        "$mod , 3, split-movetoworkspace, 3"
-        "$mod , 4, split-movetoworkspace, 4"
-        "$mod , 5, split-movetoworkspace, 5"
+        "$mod2 , 1, split-movetoworkspace, 1"
+        "$mod2 , 2, split-movetoworkspace, 2"
+        "$mod2 , 3, split-movetoworkspace, 3"
+        "$mod2 , 4, split-movetoworkspace, 4"
+        "$mod2 , 5, split-movetoworkspace, 5"
+
+        "$mod , 1, split-workspace, 1"
+        "$mod , 2, split-workspace, 2"
+        "$mod , 3, split-workspace, 3"
+        "$mod , 4, split-workspace, 4"
+        "$mod , 5, split-workspace, 5"
 
         # Example special workspace (scratchpad)
         "$mod, S,       togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
 
-        "$mod, right,   split-workspace, +1"
-        "$mod, left,    split-workspace, -1"
-
-        "$mod2, right,  split-movetoworkspace, +1"
-        "$mod2, left,   split-movetoworkspace, -1"
+        "$mod, right,   split-cycleworkspaces, +1"
+        "$mod, left,    split-cycleworkspaces, -1"
+        "$mod2, right,  movetoworkspace, +1"
+        "$mod2, left,   movetoworkspace, -1"
 
         #touch_grass plugins config
         " , edge:d:u,   togglespecialworkspace, magic"
