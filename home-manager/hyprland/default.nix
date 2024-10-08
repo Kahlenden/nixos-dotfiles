@@ -116,14 +116,6 @@ in
         "pin, title:^(Picture in picture)$"
         "float, title:^(.*)(Oracle VM VirtualBox)(.*)$"
       ];
-
-      windowrulev2 = [
-        "opacity 0.0 override, class:^(xwaylandvideobridge)$"
-        "noanim, class:^(xwaylandvideobridge)$"
-        "noinitialfocus, class:^(xwaylandvideobridge)$"
-        "maxsize 1 1, class:^(xwaylandvideobridge)$"
-        "noblur, class:^(xwaylandvideobridge)$"
-      ];
       
       workspace = [
         "special:magic, on-created-empty: ${startOnSpecialWorkspace}/bin/start"

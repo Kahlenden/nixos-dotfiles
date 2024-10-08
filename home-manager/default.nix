@@ -5,7 +5,6 @@
     ./neovim
     ./ags
 
-    ./codium.nix
     ./foot.nix
     ./git.nix
     ./theme.nix
