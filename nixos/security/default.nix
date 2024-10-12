@@ -2,12 +2,13 @@
 
   imports = [
     ./sops-nix
-    
+
     ./lanzaboote.nix
     ./mullvad.nix
     ./network.nix
     ./polkit.nix
     ./ssh.nix
+    ./wireshark.nix
   ];
 
   security = {

@@ -20,9 +20,9 @@
         hashedPasswordFile = config.sops.secrets."user-password/kahlenden".path;
 
         description = "Kahlenden";
-        extraGroups = [ "networkmanager" "wheel" "video" "audio" "libvirtd" "openrazer" ];
+        extraGroups = [ "networkmanager" "wheel" "video" "audio" "libvirtd" "openrazer" "wireshark"];
       };
-      
+
     };
   };
 
