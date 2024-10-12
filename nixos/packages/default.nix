@@ -10,9 +10,9 @@
   };
 
   environment.systemPackages = with pkgs; [
+    home-manager
     # Custom scripts
-    backup
-    restore
+    backup restore
 
     # Coding
     python311
