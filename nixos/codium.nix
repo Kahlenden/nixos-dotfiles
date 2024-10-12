@@ -22,7 +22,8 @@
           # Theming
           #esbenp.prettier-vscode
           editorconfig.editorconfig
-          sainnhe.everforest
+          #sainnhe.everforest
+          uloco.theme-bluloco-dark
           oderwat.indent-rainbow
           vscode-icons-team.vscode-icons
       ];

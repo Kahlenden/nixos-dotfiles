@@ -5,6 +5,7 @@
     ./neovim
     ./ags
 
+    ./codium.nix
     ./foot.nix
     ./git.nix
     ./theme.nix
@@ -21,7 +22,7 @@
   /* The home.stateVersion option does not have a default and must be set */
   home.stateVersion = "24.05";
 
-  programs.home-manager.enable = true; 
+  programs.home-manager.enable = true;
 
   # Bluetooth media controls
   /*
