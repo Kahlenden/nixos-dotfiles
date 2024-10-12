@@ -18,11 +18,11 @@
       show_cpu_usage=1;
       show_cpu_frequency=1;
       show_cpu_temperature=1;
-      tree_view=1;
+      tree_view=0;
       sort_direction=-1;
       tree_sort_direction=-1;
       tree_view_always_by_pid=0;
-      
+
       fields = with config.lib.htop.fields; [
         PID
         USER
