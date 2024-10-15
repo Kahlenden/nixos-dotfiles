@@ -3,11 +3,12 @@
   imports = [
     ./sops-nix
 
-    ./lanzaboote.nix
+    ./boot.nix
     ./mullvad.nix
     ./network.nix
     ./polkit.nix
     ./ssh.nix
+    ./users.nix
     ./wireshark.nix
   ];
 
@@ -21,6 +22,7 @@
 
     # Needed for gns3 to work, the wrapped executable will be located at
     # /run/wrappers/bin/ubridge
+    /*
     wrappers.ubridge = {
       source = "${pkgs.ubridge}/bin/ubridge";
       capabilities = "cap_net_admin,cap_net_raw=ep";
@@ -28,6 +30,7 @@
       group = "users";
       permissions = "u+rx,g+x";
     };
+    */
   };
 
   nix.settings = {

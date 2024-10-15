@@ -14,5 +14,4 @@
       gnome-online-accounts.enable = true;
     };
   };
-
 }

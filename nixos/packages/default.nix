@@ -1,13 +1,15 @@
-{ pkgs, ... }:
-{
-  #  imports = [ ./vscodium ];
+{ pkgs, ... }: {
   services.flatpak.enable = true;
+
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
       #"electron-19.1.9"
     ];
   };
+
+  #fonts packages
+  fonts.packages = with pkgs; [ nerdfonts font-awesome ucs-fonts freefont_ttf ];
 
   environment.systemPackages = with pkgs; [
     home-manager
@@ -25,26 +27,21 @@
     nixpkgs-fmt
 
     # Terminal utils
-    coreutils
-    findutils
-    pciutils
-    inetutils
-    htop
-    tree
-    neofetch
-    lolcat
-    curl
-    wget
-    intel-gpu-tools
-    neovim
-    jq
-    crudini
-    ascii
-    glxinfo
-    unar # unarchive
-    piper # daemon for gaming mouse
-    nmap
-    dig
+    coreutils findutils pciutils inetutils glxinfo
+    htop neofetch # desktop info
+    curl wget
+    neovim # text editor
+    jq crudini
+    nmap dig
+    unar piper tree ascii lolcat imagemagick cava# misc
+
+    # wayland necessities
+    swww
+    brightnessctl
+    hyprpicker
+    playerctl
+    wl-clipboard
+    wf-recorder grim slurp
 
     # boot stuffs
     gptfdisk
@@ -55,25 +52,24 @@
     # Necessities
     #(qt6Packages.callPackage ./caesium{}) # image compressor
     qbittorrent # Torrent client
-    libreoffice # Office
+    libreoffice # Office Suite
     keepassxc # Password manager
-    #    ollama # AI
+    #ollama # AI
     czkawka # file duplication romover
     polkit_gnome # Graphical sudo
     pavucontrol # GUI for PulseAudio
     sops # handing secrets
+    wvkbd # on screen keyboard
+    networkmanagerapplet
     openvpn
-    #xwaylandvideobridge # screen sharing on xwayland
-    openvpn3
 
     # Browsers
     brave
     mullvad-browser
     librewolf
 
-    # Networking stuffs
+    # Virtual Networking
     #gns3-server gns3-gui dynamips ubridge vpcs
-    wireshark
 
     # Monero
     monero-gui
@@ -98,14 +94,15 @@
     vesktop
     signal-desktop
     teams-for-linux
+
     # Useful gnome apps
     gnome-calculator
     gnome-bluetooth
     gnome-font-viewer
     gnome-disk-utility
+    nautilus
 
     # Music
-    songrec
     youtube-music
     amberol
 

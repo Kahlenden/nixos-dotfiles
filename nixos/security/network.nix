@@ -28,7 +28,7 @@
       allowedTCPPorts = [];
       allowedUDPPorts = [];
     };
-    
+
   };
 
   sops.secrets."wifi/Xanadu" = {};

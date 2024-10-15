@@ -2,6 +2,8 @@
   programs.vscode = {
     package = pkgs.vscodium;
     userSettings = {
+      "workbench.colorTheme" = "Bluloco Dark";
+      "workbench.iconTheme" = "vscode-icons";
       # Using the light mode
       "indentRainbow.indicatorStyle" = "light";
 

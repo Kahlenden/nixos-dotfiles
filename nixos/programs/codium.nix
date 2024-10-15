@@ -2,7 +2,9 @@
 
   environment.systemPackages = with pkgs; [
     (vscode-with-extensions.override {
+      # Use vscodium(open source) instead of vscode
       vscode = vscodium;
+      # Install extensions
       vscodeExtensions = with pkgs.open-vsx; [
           # Languages
           jnoortheen.nix-ide

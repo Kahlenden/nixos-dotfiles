@@ -1,6 +1,6 @@
 {inputs, pkgs, config, ...}:
 {
-  
+
   imports = [
     ./services.nix
   ];
@@ -10,7 +10,7 @@
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  }; 
+  };
 
   environment.sessionVariables = {
     # if cursor invisible
@@ -32,23 +32,6 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-  wvkbd
-  brightnessctl
-  networkmanagerapplet
-  hyprpicker
-  nautilus
-  swww   # <- Wallpaper deamon
-  playerctl
-  grim
-  starship
-  cava
-  imagemagick 
-  wl-clipboard
-  wf-recorder
-  slurp
-  ];
-
   /*  The below config configs the way apps interacting with each other:
   *   Screen Sharing, link opening, file opening, etc... */
   xdg.portal = {
@@ -57,5 +40,4 @@
       pkgs.xdg-desktop-portal-gtk
     ];
   };
-  
 }

@@ -2,10 +2,12 @@
   imports = [
     #./amd-egpu.nix
     #./egpu-passthrough.nix
-    ./hardware-configuration.nix
-    ./openrazer.nix
-    ./graphics.nix
-    ./bluetooth.nix
     ./audio.nix
+    ./bluetooth.nix
+    ./graphics.nix
+    ./hardware-configuration.nix
+    ./network.nix
+    ./openrazer.nix
+    ./xserver.nix
   ];
 }

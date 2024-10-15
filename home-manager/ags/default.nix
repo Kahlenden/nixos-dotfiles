@@ -3,10 +3,10 @@
   imports = [
     inputs.ags.homeManagerModules.default
   ];
-  
+
   programs.ags = {
     enable = true;
-    configDir = (pkgs.callPackage ./ags-config{}); 
+    configDir = (pkgs.callPackage ./aylur-ags.nix{});
     extraPackages = with pkgs; [
       gtksourceview
       webkitgtk
