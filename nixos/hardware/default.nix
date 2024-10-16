@@ -9,5 +9,6 @@
     ./network.nix
     ./openrazer.nix
     ./xserver.nix
+    ./cpu.nix
   ];
 }
