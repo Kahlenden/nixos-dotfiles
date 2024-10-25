@@ -22,13 +22,13 @@
   "https://safebrowsing.google.com/safebrowsing/downloads?client=SAFEBROWSING_ID&appver=%MAJOR_VERSION%&pver=2.2&key=%GOOGLE_SAFEBROWSING_API_KEY%";
 
       "browser.safebrowsing.downloads.enabled" = true;
-      
+
       # expanding or shrinking the inner window size in fixed increments, letting you blend in with a larger number of users
       "privacy.resistFingerprinting.letterboxing" = true;
 
       # Preserve browsing and download history
       "privacy.clearOnShutdown.history" = false;
-      "privacy.clearOnShutdown.downloads" = false;
+      "privacy.clearOnShutdown.downloads" = true;
     };
   };
 
