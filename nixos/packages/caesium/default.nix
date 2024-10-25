@@ -65,6 +65,8 @@ stdenv.mkDerivation (finalAttrs: {
     qttools
   ];
 
+  env.CMAKE_PREFIX_PATH = "";
+
   meta = with lib; {
     description = "Reduce file size while preserving the overall quality of the image";
     homepage = "https://github.com/Lymphatus/caesium-image-compressor";

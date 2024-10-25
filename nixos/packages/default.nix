@@ -50,11 +50,10 @@
     sbctl
 
     # Necessities
-    #(qt6Packages.callPackage ./caesium{}) # image compressor
+    (qt6Packages.callPackage ./caesium{}) # image compressor
     qbittorrent # Torrent client
     libreoffice # Office Suite
     keepassxc # Password manager
-    #ollama # AI
     czkawka # file duplication romover
     polkit_gnome # Graphical sudo
     pavucontrol # GUI for PulseAudio
@@ -72,19 +71,14 @@
     #gns3-server gns3-gui dynamips ubridge vpcs
 
     # Monero
-    monero-gui
-    monero-cli
-    xmrig
-    p2pool
+    monero-gui xmrig p2pool
 
     # Games
-    lutris
-    wineWowPackages.waylandFull
+    lutris wineWowPackages.waylandFull
     prismlauncher # Minecraft
 
     # Work
     git
-    gh
     super-productivity
 
     # Apps
@@ -107,10 +101,8 @@
     amberol
 
     # Media related
-    loupe
-    vlc
-    obs-studio
-    gimp
+    loupe gimp
+    vlc obs-studio
 
     # GPU benchmarking
     unigine-superposition
