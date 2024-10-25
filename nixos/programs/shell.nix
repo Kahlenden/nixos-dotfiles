@@ -14,7 +14,7 @@
 
     shellAliases = {
       pkgs = "sudoedit /etc/nixos/nixos/packages/default.nix";
-      update = "sudo bash -c 'nix flake update /etc/nixos && nixos-rebuild switch && cp /etc/nixos/flake.lock /etc/nixos/flake.lock.bak.d/$(date +'%b%d-%H:%M')-flake.lock'";
+      update = "sudo bash -c 'nix flake update --flake git+file:///etc/nixos && nixos-rebuild switch && cp /etc/nixos/flake.lock /etc/nixos/flake.lock.bak.d/$(date +'%b%d-%H:%M')-flake.lock'";
       rebuild = "sudo nixos-rebuild switch";
       flake-backup = "sudo cp /etc/nixos/flake.lock /etc/nixos/flake.lock.bak.d/$(date +'%b%d-%H:%M')-flake.lock";
       clear-trash = "sudo nix-collect-garbage -d";
