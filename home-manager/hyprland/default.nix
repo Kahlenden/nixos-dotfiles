@@ -116,21 +116,17 @@ in
         "pin, title:^(Picture in picture)$"
         "float, title:^(.*)(Oracle VM VirtualBox)(.*)$"
       ];
-      
+
       workspace = [
         "special:magic, on-created-empty: ${startOnSpecialWorkspace}/bin/start"
-      ]; 
-
-      master = {
-        no_gaps_when_only = "yes";
-      };
+        "w[t1], gapsin:0, gapsout:0, border:0"
+      ];
 
       dwindle = {
         # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
         pseudotile = "yes"; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = "yes"; # you probably want this
-        no_gaps_when_only = "yes";
-      }; 
+      };
 
       gestures = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
@@ -241,9 +237,9 @@ in
         "$mod, C,           exec, $code"
         "$mod, B,           exec, $browser"
         "$mod, L,           exec, ${lockscreen}/bin/lockscreen"
-        "Control Shift, R,  exec, ags -b hypr quit; ags -b hypr"  
+        "Control Shift, R,  exec, ags -b hypr quit; ags -b hypr"
 
-        # change direction of monitor 
+        # change direction of monitor
         "ALT, up, exec,    hyprctl --batch 'keyword monitor eDP-1,preferred,auto,1,transform,0 ; keyword input:touchdevice:transform 0'"
         "ALT, right, exec, hyprctl --batch 'keyword monitor eDP-1,preferred,auto,1,transform,3 ; keyword input:touchdevice:transform 3'"
         "ALT, down, exec,  hyprctl --batch 'keyword monitor eDP-1,preferred,auto,1,transform,2 ; keyword input:touchdevice:transform 2'"
@@ -295,5 +291,5 @@ in
       ];
     };
   };
-  
+
 }
