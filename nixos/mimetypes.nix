@@ -4,6 +4,7 @@
     enable = true;
     removedAssociations = {
       "inode/directory" = "codium.desktop";
+      "application/pdf" = "brave-browser.desktop";
       "image/jpeg" = "brave-browser.desktop";
       "image/png" = "brave-browser.desktop";
       "image/webp" = "brave-browser.desktop";
@@ -19,7 +20,7 @@
       "inode/directory" = "org.gnome.Nautilus.desktop";
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
       "application/msword" = "writer.desktop";
-      "application/pdf" = "brave-browser.desktop";
+      "application/pdf" = "mullvad-browser.desktop";
       "image/png" = "org.gnome.Loupe.desktop";
       "image/jpeg" = "org.gnome.Loupe.desktop";
       "image/webp" = "org.gnome.Loupe.desktop";
