@@ -9,7 +9,7 @@
     configDir = (pkgs.callPackage ./aylur-ags.nix{});
     extraPackages = with pkgs; [
       gtksourceview
-      webkitgtk
+      webkitgtk_6_0
       accountsservice
       #pkgs.libsoup_3
     ];
