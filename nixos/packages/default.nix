@@ -9,7 +9,12 @@
   };
 
   #fonts packages
-  fonts.packages = with pkgs; [ nerdfonts font-awesome ucs-fonts freefont_ttf ];
+  fonts.packages = with pkgs; [
+    nerdfonts font-awesome
+    ucs-fonts
+    freefont_ttf
+    corefonts vistafonts
+  ];
 
   environment.systemPackages = with pkgs; [
     home-manager
@@ -59,6 +64,8 @@
     pavucontrol # GUI for PulseAudio
     sops # handing secrets
     wvkbd # on screen keyboard
+    pandoc texliveSmall # md to pdf
+    trilium-desktop # markdown editor
     networkmanagerapplet
     openvpn
 
