@@ -65,7 +65,7 @@
     sops # handing secrets
     wvkbd # on screen keyboard
     pandoc texliveSmall # md to pdf
-    trilium-desktop # markdown editor
+    obsidian # markdown editor
     networkmanagerapplet
     openvpn
 
