@@ -14,6 +14,7 @@
     # if you also want 32-bit support (e.g for Steam)
     enable32Bit = true;
     package32 = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pkgsi686Linux.mesa.drivers;
+    extraPackages = with pkgs; [vpl-gpu-rt];
   };
 
 }
