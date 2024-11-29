@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+
   services.flatpak.enable = true;
 
   nixpkgs.config = {
@@ -38,7 +39,7 @@
     neovim # text editor
     jq crudini
     nmap dig
-    unar piper tree ascii lolcat imagemagick cava# misc
+    unar piper tree ascii lolcat imagemagick #cava# misc
 
     # wayland necessities
     swww
@@ -101,6 +102,7 @@
     gnome-bluetooth
     gnome-font-viewer
     gnome-disk-utility
+    gnome-decoder
     nautilus
 
     # Music
@@ -113,6 +115,10 @@
 
     # GPU benchmarking
     unigine-superposition
+
+    # Tools
+    wifite2 aircrack-ng
+    hashcat
   ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
