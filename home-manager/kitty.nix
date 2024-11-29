@@ -1,20 +1,18 @@
 {...}:{
-# Kitty terminalllll
+# Kitty terminal
   programs.kitty = {
     enable = true;
 
     font = {
       name = "JetBrainsMono Nerd Font";
-      size = 10;
+      size = 11;
     };
 
     shellIntegration.enableFishIntegration = true;
     themeFile = "Catppuccin-Macchiato";
 
     settings = {
-      background_opacity = "0.5";
-      hide_window_decorations = "yes";
+      background_opacity = "1";
     };
-    
   };
 }

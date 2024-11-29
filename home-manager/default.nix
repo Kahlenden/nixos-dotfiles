@@ -1,12 +1,10 @@
 {config, pkgs, ...}: {
 
   imports = [
-    ./hyprland
+    ./desktop
     ./neovim
-    ./ags
 
     ./codium.nix
-    ./foot.nix
     ./git.nix
     ./theme.nix
     ./htop.nix

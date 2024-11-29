@@ -32,6 +32,9 @@
     fd
     nixpkgs-fmt
 
+    # Terminal
+    kitty
+
     # Terminal utils
     coreutils findutils pciutils inetutils glxinfo
     htop neofetch # desktop info
@@ -103,6 +106,7 @@
     gnome-font-viewer
     gnome-disk-utility
     gnome-decoder
+    gnome-calendar
     nautilus
 
     # Music

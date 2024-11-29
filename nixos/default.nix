@@ -27,6 +27,9 @@
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
+  # Use gnome
+  gnome.enable = true;
+
   /*
     services.ollama = {
     enable = true;

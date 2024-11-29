@@ -2,7 +2,7 @@
 
 let
   # background images
-  bg = ./backgrounds/bg1.jpg;
+  bg = ../backgrounds/bg1.jpg;
 
   startUpScript = pkgs.pkgs.writeShellScriptBin "start" ''
     ags -b hypr &
@@ -64,8 +64,8 @@ in
         gaps_in = 5;
         gaps_out = 14;
         border_size = 0;
-        "col.active_border" = "rgba(#426ede)";
-        "col.inactive_border" = "rgba(#282828)";
+        #"col.active_border" = "rgb(#426ede)";
+        #"col.inactive_border" = "rgb(#282828)";
         layout = "dwindle";
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
@@ -74,11 +74,11 @@ in
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
         rounding = 0;
-        drop_shadow = "yes";
-        shadow_range = 1;
-        shadow_render_power = 1;
-        shadow_offset = "5 5";
-        "col.shadow" = "rgba(1a1a1aee)";
+        #drop_shadow = "yes";
+        #shadow_range = 1;
+        #shadow_render_power = 1;
+        #shadow_offset = "5 5";
+        #"col.shadow" = "rgba(1a1a1aee)";
 
         blur = {
           enabled = true;
