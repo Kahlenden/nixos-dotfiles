@@ -12,17 +12,6 @@
       block = ["fakenews" "gambling" "porn"];
     };
 
-    networkmanager = {
-      dhcp = "internal";
-      enable = true;
-
-      wifi = {
-        scanRandMacAddress = true;
-        macAddress = "random";
-      };
-      #ethernet.macAddress = "random";
-    };
-
     firewall = {
       enable = true;
       allowedTCPPorts = [];
