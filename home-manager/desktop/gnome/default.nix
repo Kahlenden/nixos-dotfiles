@@ -4,6 +4,7 @@
     "org/gnome/desktop/peripherals/touchpad" = {
       send-events = "disabled-on-external-mouse";
       two-finger-scrolling-enabled = true;
+      natural-scroll = false;
     };
 
     # Shortcuts customs
@@ -37,6 +38,24 @@
       name = "Code";
     };
 
+    # Set power button behavior
+    "org/gnome/settings-daemon/plugins/power" = {
+      power-button-action = "'interactive";
+    };
+
+    # Show battery percentage
+    "org/gnome/desktop/interface" = {
+      show-battery-percentage = true;
+    };
+
+    # Static workspace
+    "org/gnome/mutter" = {
+      dynamic-workspaces = false;
+    };
+    "org/gnome/desktop/wm/preferences" = {
+      num-workspaces = 6;
+    };
+
     # Set background
     "org/gnome/desktop/background" = {
       picture-uri = "file://${../backgrounds/bg1.jpg}";
@@ -50,6 +69,8 @@
         "blur-my-shell@aunetx"
         "dash-to-dock@micxgx.gmail.com"
         "Vitals@CoreCoding.com"
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "screen-rotate@shyzus.github.io"
       ];
       favorite-apps = [
         "signal-desktop.desktop"
@@ -89,6 +110,16 @@
         "__network-tx_max__"
         "__network-rx_max__"
       ];
+      icon-style = 1;
+      position-in-panel = 0;
+      update-time = 2;
+    };
+
+    # Screen rotate extension settings
+    "org/gnome/shell/extensions/screen-rotate" = {
+      flip-orientation = true;
+      hide-lock-rotate = true;
+      manual-flip = true;
     };
   };
 }

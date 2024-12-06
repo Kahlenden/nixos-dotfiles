@@ -71,13 +71,15 @@
     # If gnome then use gnome and GDM
     (lib.mkIf config.gnome.enable {
       services.xserver.desktopManager.gnome.enable = true;
-
       services.xserver.displayManager.gdm.enable = true;
+      services.gnome.core-os-services.enable = true;
 
       environment.systemPackages = with pkgs.gnomeExtensions; [
         dash-to-dock
         vitals
         blur-my-shell
+        appindicator
+        screen-rotate
       ];
 
       services = {
@@ -99,7 +101,7 @@
         gnome-music
         gnome-system-monitor
         gnome-weather
-        pkgs.gnome-connections
+        gnome-connections
         simple-scan
         snapshot
         totem
