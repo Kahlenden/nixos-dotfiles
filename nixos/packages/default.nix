@@ -120,9 +120,9 @@
     # GPU benchmarking
     unigine-superposition
 
-    # Tools
+    # Security Tools
     wifite2 aircrack-ng
-    hashcat
+    hashcat wordlists
   ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
