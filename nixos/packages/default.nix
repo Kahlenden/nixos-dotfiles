@@ -122,7 +122,8 @@
 
     # Security Tools
     wifite2 aircrack-ng
-    hashcat wordlists
+    hashcat ophcrack john thc-hydra
+    wordlists
   ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
