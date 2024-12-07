@@ -12,7 +12,7 @@
       rebuild = "sudo nixos-rebuild switch";
       clear-trash = "sudo nix-collect-garbage -d";
       xmrig = "sudo xmrig -c ~/config.json";
-      ssh = "export TERM=xterm; ssh -t";
+      ssh = "kitten ssh -t";
     };
   };
 
