@@ -1,10 +1,4 @@
 {config, pkgs, ...}: {
-
-  sops.secrets."monero-wallet" = {
-    owner = config.users.users.kahlenden.name;
-    inherit (config.users.users.kahlenden) group;
-  };
-
   # Set fish to be default shell for every user
   users.defaultUserShell = pkgs.fish;
 

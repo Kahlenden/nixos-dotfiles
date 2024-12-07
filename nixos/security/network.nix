@@ -19,8 +19,4 @@
     };
 
   };
-
-  sops.secrets."wifi/Xanadu" = {};
-  environment.etc."NetworkManager/system-connections/Xanadu.nmconnection".source = "${config.sops.secrets."wifi/Xanadu".path}";
-
 }
