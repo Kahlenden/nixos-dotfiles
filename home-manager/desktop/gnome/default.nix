@@ -38,9 +38,14 @@
       name = "Code";
     };
 
+    # Set idle time until screen off
+    "org/gnome/desktop/session" = {
+      idle-delay = 1500; # 25 minutes, or 1500 seconds
+    };
+
     # Set power button behavior
     "org/gnome/settings-daemon/plugins/power" = {
-      power-button-action = "'interactive";
+      power-button-action = "interactive";
     };
 
     # Show battery percentage
@@ -57,9 +62,16 @@
     };
 
     # Set background
-    "org/gnome/desktop/background" = {
-      picture-uri = "file://${../backgrounds/bg1.jpg}";
-      picture-uri-dark = "file://${../backgrounds/bg1.jpg}";
+    "org/gnome/desktop/background" = let
+      bg = ../backgrounds/bg1.jpg; # nix will generate an absolute path to /nix/store/
+    in {
+      picture-uri = "file://${bg}";
+      picture-uri-dark = "file://${bg}";
+    };
+    "org/gnome/desktop/screensaver" = let
+      bg = ../backgrounds/bg1.jpg; # nix will generate an absolute path to /nix/store/
+    in {
+      picture-uri = "file://${bg}";
     };
 
     "org/gnome/shell" = {
