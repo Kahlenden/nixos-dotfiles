@@ -7,9 +7,11 @@
     ./programs
     ./security
 
+    ./codium.nix
     ./locale.nix
     ./mimetypes.nix
     ./virtualisation.nix
+    ./shell.nix
   ];
 
   system.stateVersion = "24.05";
@@ -36,14 +38,6 @@
     #acceleration = "rocm";
     };
   */
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
 
   # Automatic Garbage Collection
   nix.gc = {
