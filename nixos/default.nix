@@ -4,7 +4,6 @@
     ./desktop
     ./hardware
     ./packages
-    ./programs
     ./security
 
     ./codium.nix
