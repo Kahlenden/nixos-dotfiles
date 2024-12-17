@@ -72,6 +72,8 @@
     obsidian # markdown editor
     networkmanagerapplet
     openvpn
+    yubikey-personalization-gui
+    calibre # E-book reader
 
     # Browsers
     brave
@@ -95,7 +97,6 @@
     # Apps
     thunderbird
     freetube
-    discord
     vesktop
     signal-desktop
     teams-for-linux
@@ -115,7 +116,7 @@
 
     # Media related
     loupe gimp
-    vlc obs-studio
+    vlc obs-studio shotcut
 
     # GPU benchmarking
     unigine-superposition
