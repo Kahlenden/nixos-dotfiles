@@ -1,4 +1,4 @@
-{...}:{
+{lib, pkgs, ...}:{
   dconf.settings = {
     # Disable touchpad when plug mouse in
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -24,13 +24,13 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       binding = "<Super>b";
-      command = "/run/current-system/sw/bin/mullvad-browser";
-      name = "Default Browser";
+      command = "${pkgs.librewolf}/bin/librewolf";
+      name = "Librewolf Browser";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
       binding = "<Alt><Super>b";
-      command = "/run/current-system/sw/bin/librewolf";
-      name = "Librewolf Browser";
+      command = "/run/wrappers/bin/mullvad-exclude ${pkgs.brave}/bin/brave";
+      name = "Brave Browser";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
       binding = "<Super>c";
@@ -40,7 +40,7 @@
 
     # Set idle time until screen off
     "org/gnome/desktop/session" = {
-      idle-delay = 1500; # 25 minutes, or 1500 seconds
+      idle-delay = (lib.hm.gvariant.mkUint32 1500); # 25 minutes, or 1500 seconds
     };
 
     # Set power button behavior
@@ -87,11 +87,12 @@
       favorite-apps = [
         "signal-desktop.desktop"
         "vesktop.desktop"
+        "obsidian.desktop"
         "virt-manager.desktop"
-        "librewolf.desktop"
         "mullvad-browser.desktop"
+        "org.keepassxc.KeePassXC.desktop"
+        "youtube-music.desktop"
         "freetube.desktop"
-        "net.lutris.Lutris.desktop"
       ];
     };
 
