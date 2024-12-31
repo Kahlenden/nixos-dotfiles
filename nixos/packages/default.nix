@@ -11,7 +11,8 @@
 
   #fonts packages
   fonts.packages = with pkgs; [
-    nerdfonts font-awesome
+    nerd-fonts.jetbrains-mono
+    font-awesome
     ucs-fonts
     freefont_ttf
     corefonts vistafonts
@@ -67,6 +68,7 @@
     polkit_gnome # Graphical sudo
     pavucontrol # GUI for PulseAudio
     sops # handing secrets
+    yt-dlp
     wvkbd # on screen keyboard
     pandoc texliveSmall # md to pdf
     obsidian # markdown editor
@@ -76,9 +78,9 @@
     calibre # E-book reader
 
     # Browsers
-    brave
-    mullvad-browser
-    librewolf
+    brave ungoogled-chromium
+    librewolf mullvad-browser
+    tor-browser
 
     # Virtual Networking
     #gns3-server gns3-gui dynamips ubridge vpcs
@@ -122,9 +124,17 @@
     unigine-superposition
 
     # Security Tools
-    wifite2 aircrack-ng
-    hashcat ophcrack john thc-hydra
-    wordlists
+      # Password Cracker
+      wifite2 aircrack-ng
+      hashcat ophcrack john thc-hydra
+      wordlists
+      # OSINT
+      sherlock
+      # Encryption
+      kdePackages.kleopatra
+      # Malware analysis
+        # Static
+          exiftool gcc oletools
   ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -280,20 +290,9 @@
             /home/"$username"/Music \
             /home/"$username"/Pictures \
             /home/"$username"/Videos \
-            /home/"$username"/Games \
-            /home/"$username"/.bitmonero \
-            /home/"$username"/Monero \
             /home/"$username"/config.json \
-            /home/"$username"/p2pool.log \
-            /home/"$username"/p2pool.cache \
-            /home/"$username"/p2pool_peers.txt \
             /home/"$username"/keepass.kdbx \
-            /home/"$username"/VirtualBox\ VMs \
             /home/"$username"/.local/share/fonts \
-            /home/"$username"/.local/share/qBittorrent/BT_backup \
-            /home/"$username"/.config/qBittorrent \
-            /home/"$username"/.config/GNS3 \
-            /home/"$username"/GNS3 \
             /home/"$username"/.icons \
           "$disk"/Back_Up/
         fi

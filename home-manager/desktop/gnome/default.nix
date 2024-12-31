@@ -90,6 +90,7 @@
         "obsidian.desktop"
         "virt-manager.desktop"
         "mullvad-browser.desktop"
+        "torbrowser.desktop"
         "org.keepassxc.KeePassXC.desktop"
         "youtube-music.desktop"
         "freetube.desktop"

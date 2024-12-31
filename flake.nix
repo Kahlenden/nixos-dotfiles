@@ -10,7 +10,7 @@
     };
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.3.0";
+      url = "github:nix-community/lanzaboote/v0.4.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,7 +42,7 @@
 
   };
 
-  outputs = { 
+  outputs = {
     self
   , sops-nix
   , lanzaboote
@@ -51,7 +51,7 @@
   , hyprland
   , nix-vscode-extensions
   , split-monitor-workspaces
-  , ... 
+  , ...
   }@inputs:
 
   let
@@ -84,7 +84,7 @@ in
             inherit inputs;
           };
         }
-      ];   
+      ];
     };
 
   };
