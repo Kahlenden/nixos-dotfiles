@@ -21,17 +21,10 @@
   # Manage the virtualisation services
   virtualisation = {
 
-    # Virtualbox configuration
-    virtualbox = {
-      host = {
-        enable = true;
-        enableExtensionPack = true;
-      };
-      guest = {
-        enable = true;
-        #draganddrop = true;
-        #clipboard = true;
-      };
+    # VMWare configuration
+    vmware = {
+      host.enable = true;
+      guest.enable = true;
     };
 
     # libvritd configuration for virt manager
