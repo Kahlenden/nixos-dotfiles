@@ -2,7 +2,6 @@
 
   imports = [
     ./hyprland
-    ./ags
     ./gnome
   ];
 }

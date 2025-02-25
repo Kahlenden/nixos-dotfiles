@@ -21,8 +21,6 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; #/b3c49142939ba6072cb8bdd6109e36d1b70a055a";
 
-    ags.url = "github:Aylur/ags";
-
     hyprland = {
       url = "https://github.com/hyprwm/Hyprland";
       type = "git";
