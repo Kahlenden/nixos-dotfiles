@@ -1,12 +1,12 @@
 { inputs, pkgs, ... }: {
 
   imports = [
-    ./desktop
     ./hardware
     ./packages
     ./security
 
     ./codium.nix
+    ./gnome.nix
     ./locale.nix
     ./mimetypes.nix
     ./virtualisation.nix
@@ -27,9 +27,6 @@
 
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
-
-  # Use gnome
-  gnome.enable = true;
 
   /*
     services.ollama = {
