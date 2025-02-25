@@ -2,9 +2,10 @@
   dconf.settings = {
     # Disable touchpad when plug mouse in
     "org/gnome/desktop/peripherals/touchpad" = {
-      send-events = "disabled-on-external-mouse";
+      send-events = "enabled";#"disabled-on-external-mouse";
       two-finger-scrolling-enabled = true;
       natural-scroll = false;
+      disable-while-typing = true;
     };
 
     # Shortcuts customs
@@ -46,6 +47,16 @@
     # Set power button behavior
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "interactive";
+      idle-dim = false;
+      sleep-inactive-ac-timeout = 1800;
+      sleep-inactive-ac-type = "suspend";
+      sleep-inactive-battery-timeout = 1800;
+      sleep-inactive-battery-type = "suspend";
+    };
+
+    # Disable alert sound
+    "org/gnome/desktop/sound" = {
+      event-sounds = true;
     };
 
     # Show battery percentage
