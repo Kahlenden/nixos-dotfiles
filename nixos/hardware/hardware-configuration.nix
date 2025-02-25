@@ -8,38 +8,47 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
-  boot.initrd.kernelModules = [ "dm-snapshot" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "usbhid" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  boot.initrd.luks.devices = {
+    root = {
+      device = "/dev/disk/by-uuid/2b9d3179-7f18-44f2-9e8f-db01e79a780b";
+      preLVM = true;
+      allowDiscards = true;
+    };
+    swap = {
+      device = "/dev/disk/by-uuid/ef88ef9c-4fe2-4e3d-bbe7-a499010c2042";
+      preLVM = true;
+      allowDiscards = true;
+    };
+  };
+
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/abe59cd7-8b7d-4e52-8ec6-ae3f9f1bb3cf";
+    { device = "/dev/disk/by-uuid/39fc0111-e2cf-415b-a6d0-9e3378c0f01d";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/D4AD-2B13";
-      fsType = "vfat";
-      options = ["umask=0777"];
+    { device = "/dev/disk/by-uuid/cf9b59bf-1ead-45ff-924d-e4989b1c1aaf";
+      fsType = "ext4";
     };
-  
-  # Need to change every time reinstall nixos
-  boot.initrd.luks.devices.root = {
-    device = "/dev/disk//by-uuid/3ce22a48-a4a3-4a61-950d-56d2a8df2f18";
-    preLVM = true;
-    allowDiscards = true;
-  };
-  
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/4aa6d962-b5f7-475a-bdc5-56917e9bce5c"; }
-    ];
+
+  fileSystems."/boot/efi" =
+    { device = "/dev/disk/by-uuid/D553-32EF";
+      fsType = "vfat";
+    };
+
+  swapDevices = [{device = "/dev/disk/by-uuid/8508dd96-2511-496c-9927-e16b4fbb7d04";}];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.eth0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
