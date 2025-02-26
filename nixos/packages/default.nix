@@ -58,6 +58,7 @@
     cryptsetup
     efibootmgr
     sbctl
+    ventoy-full
 
     # Necessities
     (qt6Packages.callPackage ./caesium{}) # image compressor
