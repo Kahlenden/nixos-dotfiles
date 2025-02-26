@@ -1,8 +1,12 @@
 {inputs, pkgs, config, lib, ...}:{
 
   services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
   services.gnome.core-os-services.enable = true;
+  services.xserver.displayManager = {
+    gdm.enable = true;
+    autoLogin.enable = true;
+    autoLogin.user = kahlenden;
+  };
 
   environment.systemPackages = with pkgs.gnomeExtensions; [
     dash-to-dock
