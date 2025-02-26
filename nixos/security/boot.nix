@@ -10,11 +10,12 @@
     loader = {
       systemd-boot.enable = lib.mkForce false; # doesnt really matter since we use lanzaboote, but whatever
       efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot/efi";
     };
 
     lanzaboote = {
       enable = true;
-      pkiBundle = "/etc/secureboot";
+      pkiBundle = "/var/lib/sbctl";
     };
 
     # Set swappiness
