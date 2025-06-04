@@ -1,16 +1,16 @@
 {
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable"; #3212a3719697ca78734510103c8aa10bb12584e3"; #nixos-unstable"; #nixos-24.05";
+      url = "github:nixos/nixpkgs/nixos-unstable"; #nixos-24.05";
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/master"; #release-24.05";
+      url = "github:nix-community/home-manager/master"; # master #release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote";
+      url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
