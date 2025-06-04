@@ -20,7 +20,7 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Control><Alt>t";
-      command = "/run/current-system/sw/bin/kitty";
+      command = "${pkgs.kitty}/bin/kitty";
       name = "Terminal";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
@@ -35,7 +35,7 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
       binding = "<Super>c";
-      command = "/run/current-system/sw/bin/codium";
+      command = "${pkgs.vscodium}/bin/codium";
       name = "Code";
     };
 
@@ -96,15 +96,14 @@
         "screen-rotate@shyzus.github.io"
       ];
       favorite-apps = [
-        "signal-desktop.desktop"
-        "vesktop.desktop"
+        "signal.desktop"
         "obsidian.desktop"
-        "virt-manager.desktop"
-        "mullvad-browser.desktop"
+        "vesktop.desktop"
+        "chromium-browser.desktop"
         "torbrowser.desktop"
+        "com.github.th_ch.youtube_music.desktop"
+        "virt-manager.desktop"
         "org.keepassxc.KeePassXC.desktop"
-        "youtube-music.desktop"
-        "freetube.desktop"
       ];
     };
 
@@ -121,8 +120,10 @@
       dock-position = "BOTTOM";
       height-fraction = 0.9;
       multi-monitor = true;
-      preferred-monitor-by-connector = "eDP-1";
+      preferred-monitor=-2;
       show-trash = false;
+      show-mounts = false;
+      show-running = false;
       transparency-mode = "FIXED";
     };
 
