@@ -22,7 +22,8 @@
   virtualisation = {
     docker.enable = true;
 
-    # VMWare configuration
+/*
+    # VBox configuration
     virtualbox = {
       host = {
         enable = true;
@@ -34,7 +35,7 @@
         clipboard = true;
       };
     };
-
+*/
     # libvritd configuration for virt manager
     libvirtd = {
       enable = true;
