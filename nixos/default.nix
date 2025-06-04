@@ -28,6 +28,13 @@
   # Enable dconf (System Management Tool)
   programs.dconf.enable = true;
 
+  services.syncthing = {
+    enable = true;
+    user = "kahlenden";
+    group = "users";
+    dataDir = "/home/kahlenden/Sync";
+  };
+
   /*
     services.ollama = {
     enable = true;
