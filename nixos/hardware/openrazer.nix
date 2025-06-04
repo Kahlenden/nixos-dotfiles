@@ -5,5 +5,4 @@
       openrazer-daemon
       polychromatic
   ];
- 
 }

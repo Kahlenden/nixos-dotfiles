@@ -19,7 +19,7 @@
     };
 
     # Set swappiness
-    kernel.sysctl = { "vm.swappiness" = 2; };
+    kernel.sysctl = { "vm.swappiness" = 60; };
     # Enable NTFS (windows filesystem)
     supportedFilesystems = [ "ntfs" ];
   };

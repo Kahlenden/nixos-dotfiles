@@ -5,12 +5,8 @@
   # Required for sops to set password during system activation
   users.mutableUsers = false;
 
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
-    #groups.tcpcryptd = {};
     users = {
-      #tcpcryptd.group = "tcpcryptd";
       kahlenden = {
         isNormalUser = true;
 
@@ -20,7 +16,7 @@
         hashedPasswordFile = config.sops.secrets."user-password/kahlenden".path;
 
         description = "Kahlenden";
-        extraGroups = [ "networkmanager" "wheel" "video" "audio" "libvirtd" "openrazer" "wireshark"];
+        extraGroups = [ "networkmanager" "wheel" "video" "audio" "libvirtd" "openrazer" "wireshark" "syncthing" "docker"];
       };
 
     };

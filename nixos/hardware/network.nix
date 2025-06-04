@@ -13,10 +13,4 @@
       #ethernet.macAddress = "random";
     };
   };
-
-  # NetworkManager
-  programs.nm-applet = {
-    enable = true;
-    indicator = true;
-  };
 }

@@ -7,8 +7,7 @@
     enable = true;
 
     shellAliases = {
-      pkgs = "sudoedit /etc/nixos/nixos/packages/default.nix";
-      update = "sudo bash -c 'nix flake update --flake git+file:///etc/nixos && nixos-rebuild switch'";
+      update = "sudo sh -c 'nix flake update --flake git+file:///etc/nixos && nixos-rebuild switch'";
       rebuild = "sudo nixos-rebuild switch";
       clear-trash = "sudo nix-collect-garbage -d";
       xmrig = "sudo xmrig -c ~/config.json";

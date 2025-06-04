@@ -6,6 +6,7 @@
       logFile = "/var/log/xorg.log";
     };
 
+    # Doesn't matter, it seems like this configuration isn't effective
     libinput.touchpad = {
       #enable = true;
       tapping = true;

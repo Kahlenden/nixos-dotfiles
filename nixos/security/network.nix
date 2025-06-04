@@ -9,7 +9,7 @@
     # list of (one of ["fakenews", "gambling", "porn", "social"] )
     stevenblack = {
       enable = true;
-      block = ["fakenews" "gambling" "porn"];
+      block = ["fakenews" "gambling"];
     };
 
     firewall = {
