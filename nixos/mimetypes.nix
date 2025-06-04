@@ -12,15 +12,15 @@
     };
 
     defaultApplications = {
-      "text/html" = "mullvad-browser.desktop";
-      "x-scheme-handler/http" = "mullvad-browser.desktop";
-      "x-scheme-handler/https" = "mullvad-browser.desktop";
-      "x-scheme-handler/about" = "mullvad-browser.desktop";
-      "x-scheme-handler/unknown" = "mullvad-browser.desktop";
+      "text/html" = "librewolf.desktop";
+      "x-scheme-handler/http" = "librewolf.desktop";
+      "x-scheme-handler/https" = "librewolf.desktop";
+      "x-scheme-handler/about" = "librewolf.desktop";
+      "x-scheme-handler/unknown" = "librewolf.desktop";
       "inode/directory" = "org.gnome.Nautilus.desktop";
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
       "application/msword" = "writer.desktop";
-      "application/pdf" = "mullvad-browser.desktop";
+      "application/pdf" = "librewolf.desktop";
 
       # Images
       "image/png" = "org.gnome.Loupe.desktop";
