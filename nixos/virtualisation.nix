@@ -20,11 +20,19 @@
 
   # Manage the virtualisation services
   virtualisation = {
+    docker.enable = true;
 
     # VMWare configuration
-    vmware = {
-      host.enable = true;
-      guest.enable = true;
+    virtualbox = {
+      host = {
+        enable = true;
+        enableExtensionPack = true;
+      };
+      guest = {
+        enable = true;
+        dragAndDrop = true;
+        clipboard = true;
+      };
     };
 
     # libvritd configuration for virt manager
