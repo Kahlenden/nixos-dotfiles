@@ -30,7 +30,7 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
       binding = "<Alt><Super>b";
-      command = "/run/wrappers/bin/mullvad-exclude ${pkgs.brave}/bin/brave";
+      command = "${pkgs.brave}/bin/brave";
       name = "Brave Browser";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
