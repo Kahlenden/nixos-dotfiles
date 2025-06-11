@@ -37,7 +37,7 @@
     ascii
     imagemagick
     git
-    john wordlists # Hash crack
+    john hashcat wordlists # Hash crack
     waypipe
     xmrig # monero miner
 
@@ -63,7 +63,7 @@
 
     # Browsers
     brave ungoogled-chromium
-    librewolf mullvad-browser
+    librewolf
 
     # Apps
     prismlauncher
