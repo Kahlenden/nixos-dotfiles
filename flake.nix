@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions"; #/b3c49142939ba6072cb8bdd6109e36d1b70a055a";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/46eb9c16d8ccfedf8bc648be03f9b2993fe3c994";
   };
 
   outputs = {
@@ -36,7 +36,7 @@
     username = "kahlenden";
     hostname = "Windows11";
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
+    pkgs = import <nixpkgs> {
       inherit system;
       overlays = [nix-vscode-extensions.overlays.default];
       config.allowUnfree = true;

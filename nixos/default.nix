@@ -5,7 +5,6 @@
     ./packages
     ./security
 
-    ./codium.nix
     ./gnome.nix
     ./locale.nix
     ./mimetypes.nix
