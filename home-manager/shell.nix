@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, ...}:{
   # FISH shell
   programs.fish = {
     enable = true;
