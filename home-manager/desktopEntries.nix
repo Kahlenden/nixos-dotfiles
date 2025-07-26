@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  ##############
+  # NOT IN USE #
+  ##############
+
   # Custom desktop entry for brave to use mullvad split tunneling
   xdg.desktopEntries = {
     brave-browser = {

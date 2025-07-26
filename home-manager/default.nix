@@ -5,7 +5,7 @@
     ./neovim
 
     ./codium.nix
-    ./desktopEntries.nix
+    #./desktopEntries.nix
     ./git.nix
     ./theme.nix
     ./htop.nix
