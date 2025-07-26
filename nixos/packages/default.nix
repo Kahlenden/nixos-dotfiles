@@ -26,7 +26,7 @@
     nixpkgs-fmt
 
     # Terminal utils
-    coreutils findutils pciutils inetutils glxinfo
+    coreutils findutils pciutils inetutils usbutils glxinfo
     htop neofetch # desktop info
     curl wget
     neovim # text editor

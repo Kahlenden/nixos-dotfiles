@@ -3,6 +3,7 @@
     #./amd-egpu.nix
     #./egpu-passthrough.nix
     ./audio.nix
+    ./biometrics.nix
     ./bluetooth.nix
     ./cpu.nix
     ./gpu.nix
