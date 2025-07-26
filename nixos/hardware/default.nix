@@ -1,11 +1,10 @@
 {...}:{
   imports = [
-    #./amd-egpu.nix
-    #./egpu-passthrough.nix
     ./audio.nix
     ./biometrics.nix
     ./bluetooth.nix
     ./cpu.nix
+    #./egpu-passthrough.nix
     ./gpu.nix
     ./hardware-configuration.nix
     ./logind.nix
