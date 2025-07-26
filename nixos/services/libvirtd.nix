@@ -15,28 +15,14 @@
     virtiofsd
   ];
 
-  # enable virt manager, the gui for libvirtd
+  # Enable virt manager, the gui for libvirtd
   programs.virt-manager.enable = true;
 
   # Manage the virtualisation services
   virtualisation = {
-    docker.enable = true;
+    spiceUSBRedirection.enable = true;
 
-/*
-    # VBox configuration
-    virtualbox = {
-      host = {
-        enable = true;
-        enableExtensionPack = true;
-      };
-      guest = {
-        enable = true;
-        dragAndDrop = true;
-        clipboard = true;
-      };
-    };
-*/
-    # libvritd configuration for virt manager
+    # libvritd configuration
     libvirtd = {
       enable = true;
 
@@ -48,11 +34,6 @@
 
       allowedBridges = [ "virbr0" ];
     };
-
-    spiceUSBRedirection.enable = true;
-
-    # Waydroid, to use android apps on Linux
-    waydroid.enable = true;
   };
 
   services.qemuGuest.enable = true;
