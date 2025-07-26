@@ -1,6 +1,0 @@
-{config, lib, ...}:{
-
-  imports = [
-    ./gnome
-  ];
-}

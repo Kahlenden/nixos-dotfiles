@@ -1,7 +1,7 @@
 {config, pkgs, ...}: {
 
   imports = [
-    ./desktop
+    ./gnome
     ./neovim
 
     ./codium.nix
