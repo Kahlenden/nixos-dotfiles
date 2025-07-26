@@ -1,4 +1,4 @@
-{config, pkgs, ...}: {
+{pkgs, ...}: {
   # Set fish to be default shell for every user
   users.defaultUserShell = pkgs.fish;
 

@@ -16,5 +16,4 @@
       package = pkgs.mullvad-vpn;
     };
   };
-
 }

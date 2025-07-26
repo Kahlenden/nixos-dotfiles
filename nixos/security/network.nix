@@ -1,4 +1,4 @@
-{config, ...}:{
+{...}:{
 
   networking = {
     # tcpcrypt causes some issues for me when using outlook, so i stopped using it
