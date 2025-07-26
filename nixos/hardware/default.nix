@@ -5,11 +5,10 @@
     ./audio.nix
     ./bluetooth.nix
     ./cpu.nix
-    ./graphics.nix
+    ./gpu.nix
     ./hardware-configuration.nix
+    ./logind.nix
     ./network.nix
-    ./openrazer.nix
-    ./printing.nix
     ./xserver.nix
   ];
 }

@@ -19,6 +19,9 @@
     power-profiles-daemon.enable = true;
   };
 
+  # Enable dconf
+  programs.dconf.enable = true;
+
   environment.gnome.excludePackages = with pkgs;[
     baobab
     epiphany

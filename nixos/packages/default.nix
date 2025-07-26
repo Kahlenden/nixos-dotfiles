@@ -60,6 +60,8 @@
     calibre # E-book reader
     remmina # rdp client
     piper
+    protontricks
+    mangohud
 
     # Browsers
     brave ungoogled-chromium

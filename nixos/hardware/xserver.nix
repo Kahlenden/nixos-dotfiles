@@ -6,7 +6,7 @@
       logFile = "/var/log/xorg.log";
     };
 
-    # Doesn't matter, it seems like this configuration isn't effective
+    # Doesn't matter, it seems like this configuration isn't effective (since we are using gnome mutter, which is wayland)
     libinput.touchpad = {
       #enable = true;
       tapping = true;
