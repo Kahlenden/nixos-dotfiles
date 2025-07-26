@@ -6,6 +6,7 @@
     ./power.nix
     ./shortcuts.nix
     ./sound.nix
+    ./theme.nix
     ./touchpad.nix
     ./workspaces.nix
   ];

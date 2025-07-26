@@ -5,6 +5,8 @@
     papirus-icon-theme
     morewaita-icon-theme
     adw-gtk3
+    adwaita-qt
+    (pkgs.callPackage ../../nixos/packages/nierCursors {})
   ];
 
   dconf.settings = {
@@ -19,7 +21,6 @@
 
     style = {
       name = "adwaita-dark";
-      package = pkgs.adwaita-qt;
     };
   };
 
@@ -28,21 +29,14 @@
 
     theme = {
       name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
-      #package = pkgs.gnome.gnome-themes-extra;
-      #name = "Adwaita-dark";
     };
 
     iconTheme = {
       name = "MoreWaita";
-      package = pkgs.morewaita-icon-theme;
-      #name = "Adwaita";
-      #package = pkgs.gnome.adwaita-icon-theme;
     };
 
     cursorTheme = {
       name = "NieR Cursors";
-      #package = (pkgs.callPackage ./nier_cursor.nix {});
     };
 
     gtk3.extraConfig = {

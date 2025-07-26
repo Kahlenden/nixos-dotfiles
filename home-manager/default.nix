@@ -7,7 +7,6 @@
     ./codium.nix
     #./desktopEntries.nix
     ./git.nix
-    ./theme.nix
     ./htop.nix
     ./kitty.nix
     ./librewolf.nix
