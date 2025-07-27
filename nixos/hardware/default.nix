@@ -1,7 +1,6 @@
 {...}:{
   imports = [
     ./audio.nix
-    ./biometrics.nix
     ./bluetooth.nix
     ./cpu.nix
     #./egpu-passthrough.nix
