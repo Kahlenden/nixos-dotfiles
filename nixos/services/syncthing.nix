@@ -2,8 +2,8 @@
 
   services.syncthing = {
     enable = true;
-    user = "kahlenden";
-    group = "users";
-    dataDir = "/home/kahlenden/Sync";
+    user = "kerry";
+    group = "kerry";
+    dataDir = "/home/kerry/Sync";
   };
 }

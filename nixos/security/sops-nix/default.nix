@@ -5,7 +5,7 @@
   ];
 
   sops = {
-    defaultSopsFile = "/etc/nixos/nixos/security/sops-nix/kahlenden/secrets.yaml";
+    defaultSopsFile = "/etc/nixos/nixos/security/sops-nix/kerry/secrets.yaml";
     validateSopsFiles = false;
 
     age = {

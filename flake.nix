@@ -33,7 +33,7 @@
   }@inputs:
 
   let
-    username = "kahlenden";
+    username = "kerry";
     hostname = "Windows11";
     system = "x86_64-linux";
     pkgs = import <nixpkgs> {

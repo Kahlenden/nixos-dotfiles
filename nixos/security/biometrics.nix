@@ -31,9 +31,9 @@ in {
   # Decrypt fingerprint template from sops nix
   sops.secrets."7" = {
     format = "binary";
-    sopsFile = "/etc/nixos/nixos/security/sops-nix/kahlenden/fingerprint.bin";
+    sopsFile = "/etc/nixos/nixos/security/sops-nix/kerry/fingerprint.bin";
     neededForUsers = true;
-    path = "/var/lib/fprint/kahlenden/elanmoc2/0/7";
+    path = "/var/lib/fprint/kerry/elanmoc2/0/7";
     mode = "0744";
     owner = "root";
   };
