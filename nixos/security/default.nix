@@ -9,6 +9,7 @@
     ./network.nix
     ./polkit.nix
     ./ssh.nix
+    ./sudo.nix
     ./users.nix
     ./wireshark.nix
   ];
