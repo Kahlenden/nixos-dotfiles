@@ -21,7 +21,7 @@
       port = 11434;
 
       # Don't need to run service for external users
-      #openFirewall = true;
+      #openFirewall = false;
     };
 
     nextjs-ollama-llm-ui = {

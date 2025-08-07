@@ -1,7 +1,7 @@
 keys:
   - &masterkey age1adevcspxqgfpdpgsyz3am6efaq3sms99qx6nga2rm2kvejs8tfhq4698dd
 creation_rules:
-  - path_regex: kerry/[^/]+\.(yaml|json|env|ini|bin)$
+  - path_regex: kerry/[^/]+\.(yaml|bin)$
     key_groups:
     - age:
       - *masterkey
