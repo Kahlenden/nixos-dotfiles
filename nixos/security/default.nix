@@ -8,6 +8,7 @@
     ./mullvad.nix
     ./network.nix
     ./polkit.nix
+    ./ssh.nix
     ./users.nix
     ./wireshark.nix
   ];
