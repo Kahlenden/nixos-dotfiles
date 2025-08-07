@@ -3,6 +3,7 @@
     # Static workspace
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
+      workspaces-only-on-primary = false;
     };
 
     # Max 6 orkspaces

@@ -30,5 +30,9 @@
       command = "${pkgs.vscodium}/bin/codium";
       name = "Code";
     };
+
+    "org/gnome/desktop/wm/keybindings" = {
+      toggle-fullscreen = ["<Shift>F11"];
+    };
   };
 }
