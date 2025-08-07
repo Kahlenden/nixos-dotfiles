@@ -21,25 +21,25 @@
   services.hardware.bolt.enable = true;
 
   # Install GPU driver packages. Mesa for graphics, ROCM for computational
-  hardware.graphics = {
-    enable = true;
-    package = pkgs.mesa;
-    # if you also want 32-bit support (e.g for Steam)
-    enable32Bit = true;
-    package32 = pkgs.pkgsi686Linux.mesa;
-
-    extraPackages = with pkgs; [
-        amdvlk
-        rocmPackages.clr.icd
-        vpl-gpu-rt
-    ];
-    extraPackages32 = with pkgs; [
-      driversi686Linux.amdvlk
-    ];
+  hardware = {
+    graphics = {
+      enable = true;
+      package = pkgs.mesa;
+      # if you also want 32-bit support (e.g for Steam)
+      enable32Bit = true;
+      package32 = pkgs.pkgsi686Linux.mesa;
+      extraPackages = with pkgs; [vpl-gpu-rt];
+    };
+    amdgpu = {
+      amdvlk = {
+        enable = true;
+        support32Bit.enable = true;
+      };
+      opencl.enable = true;
+    };
   };
 
   # ROCM for computation. See more https://discourse.nixos.org/t/ollama-isnt-using-gpu-amd-rx-7900-xtx/59596
-  hardware.amdgpu.opencl.enable = true;
   nixpkgs.config.rocmSupport = true;
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm   -    -    -     -    ${pkgs.rocmPackages.clr}"
