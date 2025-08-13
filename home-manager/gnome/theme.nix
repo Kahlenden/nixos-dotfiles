@@ -6,6 +6,7 @@
     morewaita-icon-theme
     adw-gtk3
     adwaita-qt
+    #layan-cursors
     (pkgs.callPackage ../../nixos/packages/nierCursors {})
   ];
 
@@ -36,7 +37,8 @@
     };
 
     cursorTheme = {
-      name = "NieR Cursors";
+      #name = "layan-cursors";
+      name = "nier_cursors";
     };
 
     gtk3.extraConfig = {

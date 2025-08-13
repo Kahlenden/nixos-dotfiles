@@ -79,6 +79,7 @@
     gnome-disk-utility
     gnome-decoder
     gnome-calendar
+    gnome-tweaks
     nautilus
 
     # Music
