@@ -10,7 +10,11 @@
         scanRandMacAddress = true;
         macAddress = "random";
       };
-      #ethernet.macAddress = "random";
+      ethernet.macAddress = "random";
+      connectionConfig = {
+        "ipv4.dhcp-send-hostname" = 0;
+        "ipv6.dhcp-send-hostname" = 0;
+      };
     };
   };
 }
