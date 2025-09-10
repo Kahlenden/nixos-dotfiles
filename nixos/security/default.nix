@@ -5,8 +5,8 @@
 
     ./biometrics.nix
     ./boot.nix
+    ./firewall.nix
     ./mullvad.nix
-    ./network.nix
     ./polkit.nix
     ./ssh.nix
     ./sudo.nix
