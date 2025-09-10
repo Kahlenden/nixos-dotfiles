@@ -1,8 +1,9 @@
-{pkgs, ...}:{
+{pkgs, lib, ...}:{
 
   services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
   services.gnome.core-os-services.enable = true;
+  services.gnome.gcr-ssh-agent.enable = lib.mkForce false;
 
   services.displayManager = {
     defaultSession = "gnome";
