@@ -27,6 +27,7 @@
         jnoortheen.nix-ide
         ms-python.python
         mads-hartmann.bash-ide-vscode
+        james-yu.latex-workshop
 
         # Necessities
         adpyke.codesnap

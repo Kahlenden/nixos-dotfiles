@@ -24,6 +24,7 @@
     # Coding
     python3
     nixpkgs-fmt
+    texliveFull # Latex...
 
     # Terminal utils
     coreutils findutils pciutils inetutils usbutils glxinfo
@@ -56,7 +57,7 @@
     yt-dlp
     obsidian # markdown editor
     openvpn
-    yubikey-personalization-gui
+    yubioath-flutter
     calibre # E-book reader
     remmina # rdp client
     piper
