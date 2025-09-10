@@ -5,6 +5,7 @@
 
     ./biometrics.nix
     ./boot.nix
+    ./dns.nix
     ./firewall.nix
     ./mullvad.nix
     ./polkit.nix

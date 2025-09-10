@@ -6,8 +6,6 @@
   };
 
   services = {
-    resolved.enable = true;
-
     mullvad-vpn = {
       enable = true;
       # Set to true if need split tunneling
